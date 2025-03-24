@@ -1,0 +1,44 @@
+{
+  "name": "react-states",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A monorepo for React state management examples",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "tsc --build",
+    "build:shared": "rollup -c rollup.config.js --package shared",
+    "build:zustand": "rollup -c rollup.config.js --package zustand",
+    "build:jotai": "rollup -c rollup.config.js --package jotai",
+    "build:react-query": "rollup -c rollup.config.js --package react-query",
+    "build:valtio": "rollup -c rollup.config.js --package valtio",
+    "build:all": "pnpm build:shared && pnpm build:zustand && pnpm build:jotai && pnpm build:react-query && pnpm build:valtio",
+    "test": "jest --passWithNoTests --config jest.config.ts"
+  },
+  "keywords": [
+    "react",
+    "state-management",
+    "monorepo",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.11",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^4.37.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "ts-jest": "^29.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
